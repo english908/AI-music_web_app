@@ -48,6 +48,16 @@ function draw(){
         
     }
    }
+
+   if(score_right_wrist > 0.2){
+    circle(rightWristX , rightWristY, 20);
+    song2.stop();
+    if (song1_status == false){
+        song1.play();
+        document.getElementById("song").innerHTML = "Playing - Peter Pan Song";
+        
+    }
+   }
 }
 function preload(){
     song1 = loadSound("music.mp3");
